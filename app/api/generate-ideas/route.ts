@@ -4,7 +4,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 type Volume = "High" | "Medium" | "Low";
 
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY!);
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-lite" });
+const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
 export async function POST(req: NextRequest) {
   try {
